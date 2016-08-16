@@ -53,8 +53,6 @@ lenient_zip([X|Xs],[Y|Ys]) -> [{X,Y}|lenient_zip(Xs, Ys)].
 
 tail_zip(L1, L2) -> lists:reverse(tail_zip(L1, L2, [])).
 
-% tail_zip([], _, Acc) -> Acc;
-% tail_zip(_, [], Acc) -> Acc;
 tail_zip([], [], Acc) -> Acc;
 tail_zip([L1|L1s], [L2|L2s], Acc) ->
   tail_zip(L1s, L2s, [{L1,L2}|Acc]).
