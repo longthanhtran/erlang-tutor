@@ -6,6 +6,8 @@ two() -> 2.
 
 add(X, Y) -> X() + Y().
 
+% hhfuns:add(fun hhfuns:one/0, fun hhfuns:two/0).
+
 increment([]) -> [];
 increment([H|T]) -> [H+1|increment(T)].
 
